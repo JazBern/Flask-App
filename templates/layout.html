@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/static/img/Movie.jpg');
+  background-size: cover;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #262929;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #701515;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active"> MOVIE REVIEWS</a>
+  <a class = "right-menu" href="/home">HOME</a>
+  <a class = "right-menu" href="/results">RESULTS</a>
+  <a class = "right-menu" href="/list">DATA</a>
+</div>
+
+<div style="padding-left:40px">
+  <h2>Make a review submission</h2>
+  <!-- <p>Some content..</p> -->
+</div>
+<!-- <form action="/results" method="post" style="padding-left: 40px;">
+  <label for="title" style="color: white;font-weight: bold;">Enter the name of the movie</label>
+  <br>
+  <br>
+  <input type="text" name="title"
+         placeholder="Movie Name"
+         value="{{ request.form['title'] }}"></input>
+  <br>
+  <br>
+  <label for="content" style="color: white;font-weight: bold;">Enter your review of the movie</label>
+  <br>
+  <br>
+  <textarea name="content"
+            placeholder="Review"
+            rows="15"
+            cols="60"
+            value ="{{ request.form['content'] }}"></textarea>
+  <br>
+  <button type="submit">Submit</button>
+</form> -->
+<form action="/results" method="post" style="padding-left: 40px;">
+  <!-- <h3>ADD A MOVIE REVIEW</h3> -->
+         <p style="font-weight: bold;color: white;">Name of the movie</p>
+          <input type = "text" name = "name" size="48" style ="background-color: #d9c896;font-size: 20px;border-radius: 15px;" /><br>
+         <br>
+         <br>
+         <p style="font-weight: bold; color: white;">Enter your review of the movie</p>
+         <textarea name = "review" rows="20" cols="60" style ="background-color: #d9c896;border-radius: 14px;" ></textarea><br>
+         
+         <input type = "submit" value = "submit" /><br>
+</form>
+</body>
+</html>

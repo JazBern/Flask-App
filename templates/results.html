@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      body {
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        background-image: url('/static/img/Movie.jpg');
+        background-size: cover;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: #262929;
+      }
+      
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 23px;
+        font-weight: bold;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .topnav a.active {
+        background-color: #701515;
+        color: white;
+      }
+      .button {
+  background-color: darkred; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #d9c896; 
+  color: black; 
+  border: 2px solid darkred;
+}
+
+.button1:hover {
+  background-color: darkred;
+  color: #d9c896;
+}
+
+.button2 {
+  background-color: #d9c896; 
+  color: black; 
+  border: 2px solid darkred;
+}
+
+.button2:hover {
+  background-color: darkred;
+  color: #d9c896;
+}
+      </style>
+    </head>
+    <body>
+    <div class="topnav">
+        <a class="active"> MOVIE REVIEWS</a>
+        <a class = "right-menu" href="/home">HOME</a>
+        <a class = "right-menu" href="/results">RESULTS</a>
+        <a class = "right-menu" href="/list">DATA</a>
+    </div>
+    <h1 style="color: white; padding-left: 20px;"> It was a {{ msg }} review !</h1>
+    <form action="/feedback" method="post" style="padding-left: 20px;">
+    <button class="button button1" style ="font-weight: bold;" name = "feedback" value = "correct">Yes</button>
+    <button class="button button2" style ="font-weight: bold;" name = "feedback" value = "wrong">No</button>
+    </form>
+    </body>
+</html>
